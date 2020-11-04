@@ -1,0 +1,164 @@
+#include <stdio.h>
+#include <stdarg.h>
+#include <time.h>
+
+
+int szescian(int a){
+return a*a*a;
+}
+
+
+int main()
+{
+int a;
+scanf("%i",&a);
+printf("Sześcian liczby wynosi %i",szescian(a));
+
+
+return 0;
+
+}
+
+int average(int a,int b,int c,int d, int e){
+
+return (a+b+c+d+e)/5;
+}
+
+int main()
+{
+int a,b,c,d,e;
+int tab[5]={1,3,5,7,9};
+
+a=tab[0];
+b=tab[1];
+c=tab[2];
+d=tab[3];
+e=tab[4];
+
+printf("Średnia liczb w tablicy wynosi: %i",average(a,b,c,d,e));
+
+return 0;
+}
+
+float podwojenie(float a){
+return a*2;
+}
+int main()
+{
+float a;
+printf("Wpisz liczbę:\n");
+scanf("%f",&a);
+printf("Podwojona liczba wynosi %.2f, twoja oryginalna liczba wynosi %.2f",podwojenie(a),a);
+
+return 0;
+}
+
+ERROR WESELE
+void tekstydwa(char* a[100],char* b[100]){
+int i;
+printf("[%s]%s",a,b);
+}
+
+int main()
+{
+char* a[100];
+char* b[100];
+fgets(a,100,stdin);
+fgets(b,100,stdin);
+
+tekstydwa(a,b);
+
+return 0;
+}
+
+int licznik=1;
+void komunikat(){
+printf("%i. Jest to stały komunikat zmienia się tylko liczba\n",licznik);
+licznik++;
+}
+int main()
+{
+int licznik;
+komunikat();
+komunikat();
+komunikat();
+komunikat();
+komunikat();
+komunikat();
+
+return 0;
+}
+
+int silnia(int a){
+int i;
+int wynik=1;
+
+    for(i=a;i>=1;--i){
+    wynik=wynik*i;
+    }
+
+    return wynik;
+}
+
+int main()
+{
+int b;
+printf("Podaj liczbę funkcja liczy silnie\n");
+scanf("%i",&b);
+printf("Silnia z liczby %i wynosi: %i",b,silnia(b));
+
+return 0;
+}
+
+
+void podwojenie(int tab[]){
+int i;
+
+    printf("Podwojona tablica:\n");
+    for(i=0;i<4;++i){
+    printf("%i ",tab[i]*2);
+    }
+}
+int main()
+{
+int tab[4]={1,2,3,4};
+int i;
+podwojenie(tab);
+
+    printf("\nStara tablica wyglądała tak:\n");
+    for(i=0;i<4;++i){
+    printf("%i ",tab[i]);
+    }
+
+return 0;
+}
+/*
+int main()
+{
+int tab[4]={1,2,3,4};
+int i;
+int wynik;
+    for(i=0;i<5;++i){
+    wynik=tab[i]*2;
+    }
+
+printf("Podwojone wartości tablicy wynoszą: %i, stara tablica wynosiła: %i",tab[4],wynik);
+return 0;
+}
+
+int main()
+{
+int tab[3]={1,2,3};
+int i=0;
+int j=0;
+    printf("Wartosci tablicy wynoszą:\n");
+        for(i=0;i<3;++i){
+        printf("%i ",tab[i]);
+        }
+            printf("\nWartości podwojone tablicy wynoszą:\n");
+            for(j=0;j<3;++j){
+            printf("%i ",tab[j]*2);
+            }
+}
+
+*/
